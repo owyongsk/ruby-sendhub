@@ -1,6 +1,7 @@
 # ruby-sendhub
 
 ruby-sendhub is a simple API wrapper for interacting with [SendHub API](http://www.sendhub.com/developer)
+
 It's my first ever gem, so I'm crying right now as you read this.
 
 ##Installation
