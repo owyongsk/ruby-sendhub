@@ -24,6 +24,12 @@ class SendHub
 		c.parsed_response['objects']
 	end
 
+	def add_contacts(name, number)
+		api_url = base_url + "contacts" + credentials
+		m = { :name => name, :number => number.to_s }
+		self.class.post(api_url, :body => m.to_json)
+	end
+
 	def send_message(message, *args)
 		api_url = base_url + "messages" + credentials
 		m = { :contacts => args, :text => message }

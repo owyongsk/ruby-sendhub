@@ -12,7 +12,7 @@ A SendHub account. Get your API key [here](https://www.sendhub.com/settings)
 
 ##Usage
 
-Currently, only three methods are implemented as this is my first Gem ever. Woohoo! "cries"
+Currently, only a few methods are implemented as this is my first Gem ever. Woohoo! "cries"
 
 Create a new instance of the API wrapper:
 
@@ -21,6 +21,10 @@ Create a new instance of the API wrapper:
 Now you grab the contacts you have. You need the contact id to send any message
 
 		sh.get_contacts
+
+Or create the contact if you need to
+
+		sh.add_contacts("John Ninjamura", 4082420010)
 
 Or grab all the groups
 
