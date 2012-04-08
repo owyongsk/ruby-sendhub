@@ -16,15 +16,15 @@ Currently, only two methods are implemented as this is my first Gem ever. Woohoo
 
 Create a new instance of the API wrapper:
 
-		sb = SendHub.new("your_api_key", "your_number")
+		sh = SendHub.new("your_api_key", "your_number")
 		
-Now you grab the contacts you have. You need the contact ID to send any message
+Now you grab the contacts you have. You need the contact id to send any message
 
-		sb.get_contacts
+		sh.get_contacts
 
 Once you grabbed the contacts you can send messages to the contact(s) by
 
-		sb.send_message("Your message here", *num)
+		sh.send_message("Your message here", *id)
 
 ##Special Thanks
 
