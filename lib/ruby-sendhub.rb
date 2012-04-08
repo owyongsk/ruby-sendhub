@@ -1,7 +1,6 @@
 require "ruby-sendhub/version"
 require 'httparty'
 require 'json'
-require 'cgi'
 
 class SendHub
 	include HTTParty

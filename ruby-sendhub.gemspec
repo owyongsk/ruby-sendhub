@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Ruby::Sendhub::VERSION
   s.authors     = ["SoonKhen OwYong"]
   s.email       = ["dude@owyong.sk"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/skowyong/ruby-sendhub"
+  s.summary     = %q{A simple Ruby wrapper for SendHub API}
+  s.description = %q{My first gem and no tests yet. Ruby wrapper for SendHub API}
 
   s.rubyforge_project = "ruby-sendhub"
 
@@ -20,5 +20,7 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+
+	s.add_runtime_dependency "httparty"
+ 	s.add_runtime_dependency "json"
 end
