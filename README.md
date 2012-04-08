@@ -1,6 +1,7 @@
 # ruby-sendhub
 
 ruby-sendhub is a simple API wrapper for interacting with [SendHub API](http://www.sendhub.com/developer)
+It's my first ever gem, so I'm crying right now as you read this.
 
 ##Installation
 
@@ -12,27 +13,21 @@ A SendHub account. Get your API key [here](https://www.sendhub.com/settings)
 
 ##Usage
 
-Currently, only a few methods are implemented as this is my first Gem ever. Woohoo! "cries"
-
 Create a new instance of the API wrapper:
 
 		sh = SendHub.new("your_api_key", "your_number")
 		
-Now you grab the contacts you have. You need the contact id to send any message
+As a simple example, to grab all of your contacts
 
 		sh.get_contacts
 
-Or create the contact if you need to
+SendHub API uses RESTful services. Every methods begin with post, put, update, or delete and their resources. A more advanced example:
 
-		sh.add_contacts("John Ninjamura", 4082420010)
+		sh.post_contacts({:name => "SoonKhen OwYong", :number => 4040404040, :address => "1 Infinite Loop", :city => "Cupertino", :zip => "95014"})
 
-Or grab all the groups
+Every put or delete requests must have :id in it
 
-		sh.get_groups
-
-Once you grabbed the contacts you can send messages to the contact(s) or group(s) by
-
-		sh.send_message("Your message here", *group_ids, *contact_ids)
+		sh.delete_contacts({:id => [11]})
 
 ##Special Thanks
 

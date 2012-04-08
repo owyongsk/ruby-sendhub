@@ -14,26 +14,15 @@ class SendHub
 		@api_key = api_key
 	end
 
-	def get_contacts
-		c = self.class.get base_url + "contacts" + credentials
-		c.parsed_response['objects']
-	end
-
-	def get_groups
-		c = self.class.get base_url + "groups" + credentials
-		c.parsed_response['objects']
-	end
-
-	def add_contacts(name, number)
-		api_url = base_url + "contacts" + credentials
-		m = { :name => name, :number => number.to_s }
-		self.class.post(api_url, :body => m.to_json)
-	end
-
-	def send_message(message, *args)
-		api_url = base_url + "messages" + credentials
-		m = { :contacts => args, :text => message }
-		self.class.post(api_url, :body => m.to_json)
+	def method_missing(method, hsh = {})
+		meth = method.to_s.split("_")
+		if meth.first == "put" || meth.first == "delete"
+			api_url = base_url + meth.last + "/" + hsh[:id].to_s + credentials
+		else
+			api_url = base_url + meth.last + credentials
+		end
+		ret = self.class.send(meth.first, api_url, :body => hsh.to_json).parsed_response
+		ret.nil? && meth.first == "delete" ? "Aaaand it's gone" : ret
 	end
 
 	private
