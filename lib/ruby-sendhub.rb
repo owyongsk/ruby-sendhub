@@ -19,6 +19,11 @@ class SendHub
 		c.parsed_response['objects']
 	end
 
+	def get_groups
+		c = self.class.get base_url + "groups" + credentials
+		c.parsed_response['objects']
+	end
+
 	def send_message(message, *args)
 		api_url = base_url + "messages" + credentials
 		m = { :contacts => args, :text => message }
