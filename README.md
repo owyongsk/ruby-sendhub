@@ -28,8 +28,8 @@ Once you grabbed the contacts you can send messages to the contact(s) by
 
 ##Special Thanks
 
-My mom and dad, seriously, first gem you know
-[Amro Mousa](https://github.com/amro) for his source code on Gibbon, inspired this code
+* My mom and dad, seriously, first gem you know
+* [Amro Mousa](https://github.com/amro) for his source code on Gibbon, inspired this code
 
 ##License
 
