@@ -26,7 +26,7 @@ SendHub API uses RESTful services. Every methods begin with post, put, update, o
 
 		sh.post_contacts({:name => "SoonKhen OwYong", :number => 4040404040, :address => "1 Infinite Loop", :city => "Cupertino", :zip => "95014"})
 
-Every put or delete requests must have :id in it
+Every put or delete requests must have an :id hash key
 
 		sh.delete_contacts({:id => [11]})
 
