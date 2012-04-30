@@ -32,24 +32,19 @@ class SendHub
 		ret.nil? && meth.first == "delete" ? "Aaaand it's gone" : ret
 	end
 
-	def get_group_contacts(hsh = {})
-		# Some bug in Sendhub or I need some sleep
-		cre = credentials
-		cre.slice!(0)
-		api_url = base_url + "groups/" + hsh[:id].to_s + "/contacts" + cre
-		#api_url
-		send_request("get", api_url, :body => hsh.to_json)
+	def get_groups_contacts(hsh = {})
+		send_request("get", group_contacts_url(hsh), :body => hsh.to_json)
 	end
 
-	def post_group_contacts(hsh = {})
-		cre = credentials
-		cre.slice!(0)
-		api_url = base_url + "groups/" + hsh[:id].to_s + "/contacts" + cre
-		#api_url
-		send_request("post", api_url, :body => hsh.to_json)
+	def post_groups_contacts(hsh = {})
+		send_request("post", group_contacts_url(hsh), :body => hsh.to_json)
 	end
 
 	private
+
+		def group_contacts_url(hsh)
+			base_url + "groups/" + hsh[:id].to_s + "/contacts" + credentials
+		end
 
 		def send_request(request_type, url, json)
 			self.class.send(request_type, url, json).parsed_response

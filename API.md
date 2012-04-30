@@ -44,7 +44,7 @@ Editing a Contact
 
 Deleting a Contact
 
-		sh.delete_contact({:id => 22413})
+		sh.delete_contacts({:id => 22413})
 
 ##Groups
 
@@ -58,11 +58,11 @@ Collect Groups List
 
 Collect a Single Group's Contacts
 
-		Not Working
+		sh.get_groups_contacts({:id => 1220})
 		
 Adding and Removing Contacts
 		
-		Not Working either
+		sh.post_groups_contacts({:id => 1220, :add => [22081], :remove => [22411, 22412]})
 
 Editing a Group
 
