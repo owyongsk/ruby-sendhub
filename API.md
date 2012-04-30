@@ -2,8 +2,6 @@
 
 All the examples that you see here are the same from [SendHub's API page](http://apidocs.sendhub.com/).
 
-All the method nouns are always in plural even if you are just requesting a single object.
-
 Create a new instance of the API wrapper:
 
 		sh = SendHub.new("your_api_key", "your_number")
@@ -72,7 +70,7 @@ Editing a Group
 
 Deleting a Group
 
-		sh.delete_group({:id => 1220})
+		sh.delete_groups({:id => 1220})
 		
 ##Inbox
 
