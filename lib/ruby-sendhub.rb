@@ -33,6 +33,7 @@ class SendHub
 	end
 
 	def get_group_contacts(hsh = {})
+		# Some bug in Sendhub or I need some sleep
 		cre = credentials
 		cre.slice!(0)
 		api_url = base_url + "groups/" + hsh[:id].to_s + "/contacts" + cre
