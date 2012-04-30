@@ -2,6 +2,8 @@
 
 All the examples that you see here are the same from [SendHub's API page](http://apidocs.sendhub.com/).
 
+All the method nouns are always in plural even if you are just requesting a single object.
+
 Create a new instance of the API wrapper:
 
 		sh = SendHub.new("your_api_key", "your_number")
