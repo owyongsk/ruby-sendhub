@@ -1,5 +1,7 @@
 ##Getting started
 
+All the examples that you see here are the same from [SendHub's API page](http://apidocs.sendhub.com/).
+
 Create a new instance of the API wrapper:
 
 		sh = SendHub.new("your_api_key", "your_number")
