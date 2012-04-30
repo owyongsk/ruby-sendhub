@@ -54,8 +54,36 @@ Collect Groups List
 
 		sh.get_groups
 
-Collect a Single Group's Data
+Collect a Single Group's Contacts
 
 		Not Working
 		
-Add or Remove a Group	
+Adding and Removing Contacts
+		
+		Not Working either
+
+Editing a Group
+
+		sh.put_groups({:id => 1220, :name => "Best Customers", :slug => "regulars", :text_to_subscribe => true})
+
+Deleting a Group
+
+		sh.delete_group({:id => 1220})
+		
+##Inbox
+
+Collecting the Inbox
+
+		sh.get_inbox
+
+##Threads
+
+Viewing Threads
+
+		sh.get_threads({:id => 12555})
+
+##Profile
+
+Collecting the Profile
+
+		sh.get_profile
