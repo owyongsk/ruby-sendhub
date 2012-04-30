@@ -8,7 +8,7 @@ Create a new instance of the API wrapper:
 
 ##Messages
 
-Sending a message "Testing" to the contact with id "1111"
+Sending a Message
 
 		sh.post_messages({:contacts => [1111], :text => "Testing"})
 
