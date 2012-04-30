@@ -30,9 +30,4 @@ Adding a contact
 
 Adding a contact with additional data
 
-		sh.post_contacts({:name => "John Doe", 
-											:number => "6501234567", 
-											:groups => [11,12], 
-											:address => "1 Infinite Loop", 
-											:city => "Cupertinl", 
-											:zip => "95014"})
+		sh.post_contacts({:name => "John Doe", :number => "6501234567", :groups => [11,12], :address => "1 Infinite Loop", :city => "Cupertino", :zip => "95014"})
