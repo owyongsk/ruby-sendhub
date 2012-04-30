@@ -24,10 +24,38 @@ Mark Message as Read
 
 ##Contacts
 
-Adding a contact
+Adding a Contact
 
 		sh.post_contacts({:name => "John Doe", :number => "6501234567"})
 
-Adding a contact with additional data
+Adding a Contact with Additional Data
 
 		sh.post_contacts({:name => "John Doe", :number => "6501234567", :groups => [11,12], :address => "1 Infinite Loop", :city => "Cupertino", :zip => "95014"})
+
+Collecting Contacts Data
+
+		sh.get_contacts
+
+Editing a Contact
+
+		sh.put_contacts({:id => 22413, :name => "Jesse Doe", :number => 6501234567})
+
+Deleting a Contact
+
+		sh.delete_contact({:id => 22413})
+
+##Groups
+
+Adding a Group
+
+		sh.post_groups({:name => "Regulars", :slug => "regulars", :text_to_subscribe => true})
+
+Collect Groups List
+
+		sh.get_groups
+
+Collect a Single Group's Data
+
+		Not Working
+		
+Add or Remove a Group	
