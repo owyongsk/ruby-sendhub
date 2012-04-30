@@ -16,7 +16,7 @@ class SendHub
 
 	def method_missing(method, hsh = {})
 		meth = method.to_s.split("_")
-		if meth.first == "put" || meth.first == "delete"
+		if meth.first == "put" || meth.first == "delete" || meth.last == "threads"
 			api_url = base_url + meth.last + "/" + hsh[:id].to_s + credentials
 		else
 			api_url = base_url + meth.last + credentials

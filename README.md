@@ -12,7 +12,7 @@ It's my first ever gem, so I'm crying right now as you read this.
 
 A SendHub account. Get your API key [here](https://www.sendhub.com/settings)
 
-##Usage
+##Getting started
 
 Create a new instance of the API wrapper:
 
